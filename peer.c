@@ -206,7 +206,8 @@ void peer_listen_loop(uint32_t addr, uint16_t port)
                     /* 
                     in the real world, this would usually involve much more complex cryptography to ensure
                     only the bot master can propagate commands throughout the network, but since we are in
-                    simple C, can't really do a lot more than this lol.
+                    simple C, can't really do a lot more than this lol (I am too lazy to adopt OpenSSL or
+                    libsodium XD).
                     */
                     if (strncmp(buff, "admin", 5) == 0) 
                     {
