@@ -269,12 +269,12 @@ void *peer_gossip(void *arg)
             }
             ip[i] = '\0';
  
-            uint32_t addr;
+            struct in_addr addr;
             if (inet_pton(PF_INET, ip, &addr) <= 0) break;
  
             uint16_t port = (uint16_t)atoi(token + i + 1);
  
-            fd = peer_establish_connection(addr, port);
+            fd = peer_establish_connection(addr.s_addr, port);
             if (fd < 0) 
             {
                 token = strtok(NULL, "\n");
