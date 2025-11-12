@@ -261,11 +261,12 @@ void *peer_gossip(void *arg)
                 continue;
             }
  
-            char ip[i-1];
+            char ip[i];
             for (int j = 0; j < i - 1; j++) 
             {
                 ip[j] = token[j];
             }
+            ip[i] = '\0';
  
             uint32_t addr;
             if (inet_pton(PF_INET, ip, &addr) <= 0) break;
