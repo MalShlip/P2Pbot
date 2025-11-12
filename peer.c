@@ -34,7 +34,7 @@ USE THIS LEGALLY!!!
 #define INET_ADDR(o1, o2, o3, o4) htonl(o1 << 24 | o2 << 16 | o3 << 8 | o4)
  
 /* 
-    this is the config section, here you can edit bootstrap node, etc.
+    this is the config section, here you can edit the bootstrap node, etc.
 */
 #define CONFIG_BOOTSTRAP_ADDR INET_ADDR(127,0,0,1)
 #define CONFIG_BOOTSTRAP_PORT 8080
